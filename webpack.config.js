@@ -1,4 +1,4 @@
-var Encore = require('@symfony/webpack-encore');
+const Encore = require('@symfony/webpack-encore');
 
 Encore
     // the project directory where compiled assets will be stored
@@ -8,7 +8,7 @@ Encore
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
     // uncomment to create hashed filenames (e.g. app.abc123.css)
-    // .enableVersioning(Encore.isProduction())
+     .enableVersioning(Encore.isProduction())
 
     // uncomment to define the assets of the project
     .addEntry('js/app', './assets/js/app.js')
@@ -22,6 +22,10 @@ Encore
     // uncomment for legacy applications that require $/jQuery as a global variable
     .autoProvidejQuery()
     .autoProvideVariables({ Popper: ['popper.js', 'default'] })
+
+    .configureFilenames({
+        images: '[path][name].[hash:8].[ext]',
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
