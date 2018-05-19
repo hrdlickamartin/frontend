@@ -11,5 +11,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "components/bootstrap-overrides.scss";
 
 @import '~bootstrap/scss/bootstrap';
+
+// external css
 @import "~magnific-popup/dist/magnific-popup.css";
 @import "~font-awesome/css/font-awesome.css";
