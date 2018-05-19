@@ -1,8 +1,13 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 // overrides must be before import bootstrap
-@import "components/variables";
+@import "components/variables.scss";
+@import "components/mixins.scss";
+@import "components/global.scss";
+@import "components/navbar.scss";
+@import "components/masthead.scss";
+@import "components/portfolio.scss";
+@import "components/contact.scss";
+@import "components/footer.scss";
+@import "components/bootstrap-overrides.scss";
 
 @import '~bootstrap/scss/bootstrap';
-
-@import "components/global";
-@import "components/cards";
